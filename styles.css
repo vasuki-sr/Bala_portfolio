@@ -837,7 +837,7 @@ nav {
   .header__image {
     justify-content: center; /* Centers the container within the section */
     padding: 1rem;
-    margin-left: 60px;
+    
   }
 
   .image__container {
