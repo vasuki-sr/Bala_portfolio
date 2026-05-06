@@ -1,0 +1,927 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #7c392e;
+  --secondary-color: #ff0000;
+  --extra-light: #383636;
+  --white: #f00808;
+  --gradient-1: linear-gradient(to bottom right, #f7f2f2, #f8f0f0);
+  --gradient-2: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.section__description {
+  max-width: 600px;
+  margin-inline: auto;
+  color: var(--extra-light);
+  text-align: center;
+  line-height: 1.75rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  background-image: var(--gradient-2);
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  display: inline-block;
+  padding: 10px 14px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  background-image: var(--gradient-2);
+  border-radius: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--white);
+  background-image: var(--gradient-1);
+}
+
+/* Navigation Styling */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav__bar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo a {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  background-image: var(--gradient-2);
+  padding: 5px 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav__links a {
+  font-weight: 600;
+  color: #e72e2e;
+  transition: 0.3s;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.nav__links a:hover {
+  color: rgb(121, 25, 25);
+}
+
+.nav__menu__btn {
+  display: none; /* Hidden on desktop */
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Maintains the 60/40 split */
+  align-items: center; /* Vertically centers the text against the image */
+  justify-items: start; /* Ensures content stays aligned to the left */
+  gap: 4rem; /* Increases breathing room between text and image */
+  min-height: 100vh;
+  padding-top: 80px; /* Accounts for the fixed navigation bar */
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.header__content h1 {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  margin-bottom: 0.5rem;
+  color: rgb(184, 37, 37);
+}
+
+.header__content h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header__content .section__description {
+  margin-inline: 0; /* Aligns the description text to the left instead of center */
+  text-align: left; /* Changes from center to left for a professional resume feel */
+  max-width: 500px; /* Prevents lines from becoming too long to read */
+  margin-bottom: 2rem;
+}
+
+.header__btn .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff !important; /* Forces the text color to pure white */
+  background-image: var(--gradient-2);
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.header__btn .btn:hover {
+  color: #ffffff; /* Maintains white text on hover */
+  transform: translateY(-2px);
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Unique Geometric Image Design */
+.header__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.image__container {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  z-index: 1;
+}
+
+.image__container img {
+  height: 420px;
+  width: 100%;
+  aspect-ratio: 4/5; /* Professional portrait ratio */
+  object-fit: cover;
+  border-radius: 4px;
+  filter: grayscale(20%); /* Subtle professional desaturation */
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+/* The "Ghost Frame" - Represents Precision/Drafting */
+.image__container::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid red;
+  border-radius: 4px;
+  z-index: 0;
+  transition: all 0.5s ease;
+}
+
+/* The Decorative Solid Accent */
+/* Dot grid pattern like engineering paper */
+.image__container::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 80px;
+  height: 80px;
+  background-image: radial-gradient(red 2px, transparent 2px);
+  background-size: 10px 10px; 
+  z-index: 3;
+  opacity: 0.6;
+}
+
+/* Hover Interaction */
+.image__container:hover img {
+  transform: translate(-10px, -10px);
+  filter: grayscale(0%);
+}
+
+.image__container:hover::before {
+  transform: translate(10px, 10px);
+  border-color: var(--secondary-color);
+}
+
+/* Center the about section now that the image is gone */
+.about__container {
+  display: block; /* Change from grid to block */
+  text-align: center;
+  max-width: 800px; /* Constrain width for better readability */
+  margin: auto;
+}
+
+.about__content {
+  text-align: center; /* Force centering for all children */
+}
+
+.about__content .section__description {
+  margin-inline: auto; /* Center the paragraph box */
+  margin-bottom: 2rem;
+  max-width: 100%; /* Allow it to use the container width */
+}
+
+.about__btn .btn {
+  color: white;
+}
+
+/* Container for the overall skills section */
+.skills__vertical-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Space between the group cards */
+  max-width: 900px;
+  margin: 3rem auto;
+}
+
+/* Group Card (The white box containing multiple skills) */
+.skills__group-container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Header inside the white card */
+.skills__group-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #a00217;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  border: none;
+  padding: 0;
+}
+
+/* Icon style for the headers (uses RemixIcons you already have) */
+.skills__group-label i {
+  color: #f6603b; /* Blue for Technical, you can change per group */
+  font-size: 1.6rem;
+}
+
+/* Individual Skill Row */
+.skill__card {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  box-shadow: none;
+  border: none;
+}
+
+.skill__card:hover {
+  transform: none; /* Removed hover lift to match image style */
+}
+
+/* Text and Percentage alignment */
+.skill__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: #66303a;
+  font-size: 0.95rem;
+}
+
+/* Icon next to skill names */
+.skill__info span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Progress Bar Background */
+.progress__bar {
+  width: 100%;
+  height: 8px; /* Slimmer bar like the image */
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+
+
+/* Gradient for Tools & Core Skills (Blue Theme) */
+.skill__card[data-color="#ff4d4d"] .progress{
+   background: linear-gradient(90deg, #9c4f1b 0%, #ff3636 100%);
+  box-shadow: 0 2px 8px rgba(246, 59, 59, 0.3);
+}
+.skill__card[data-color="#e67e22"] .progress {
+  background: linear-gradient(90deg, #af641e 0%, #ee5045 100%);
+  box-shadow: 0 2px 8px rgba(246, 128, 59, 0.3);
+}
+
+/* Gradient for Soft/Professional Skills (Orange/Red Theme) */
+.skill__card[data-color="#3498db"] .progress {
+  background: linear-gradient(90deg, #c2410c 0%, #f97316 100%);
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+}
+
+/* Optional: Add a subtle animation to the gradient */
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  background-size: 200% 100%;
+  animation: shimmer 5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Adjust text colors for percentages */
+.skill__info span:last-child {
+  color: #f6483b;
+  font-weight: 700;
+}
+
+.skill__card[data-color="#3498db"] .skill__info span:last-child {
+  color: #f97316;
+}
+
+.project__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.project__card {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.project__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.project__image {
+  position: relative;
+  min-height: 280px;
+  background-color: #f8f9fa; /* Placeholder color */
+}
+
+.project__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project__badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #eb3225; /* Primary Blue */
+  color: #ffffff;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.project__badge.efficiency { background-color: #ee2121; } 
+.project__badge.npd { background-color: #fa2929; } 
+
+.project__content {
+  padding: 2.5rem;
+}
+
+.project__content h3 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.project__role {
+  color: #f71515;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project__summary {
+  color: #8b6464;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project__tags {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.project__tags span {
+  padding: 0.4rem 1rem;
+  background-color: #f8e4e4;
+  color: #d82626;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid #dbeafe;
+}
+
+.project__details {
+  list-style: none;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1.5rem;
+}
+
+.project__details li {
+  font-size: 0.95rem;
+  color: #2e1c1c;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.project__details li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: #eb2525;
+  border-radius: 50%;
+}
+
+.filter-btn {
+  background: white;
+  color: var(--primary-color);
+  border: 1px solid #ddd;
+  box-shadow: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-btn.active {
+  background-image: var(--gradient-2);
+  color: white;
+  border: none;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.gallery__item:hover img {
+  transform: scale(1.03);
+}
+
+/* Creating the masonry effect */
+.gallery__item.vertical {
+  grid-row: span 2;
+}
+
+.gallery__item.tall {
+  grid-row: span 2;
+}
+
+.roadmap-new {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 4rem auto;
+  position: relative;
+}
+
+.roadmap-card {
+  position: relative;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  border-left: 8px solid var(--secondary-color);
+  transition: all 0.4s ease;
+}
+
+/* Decorative Step Number */
+.roadmap-card::before {
+  content: attr(data-step);
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(219, 64, 64, 0.137);
+  line-height: 1;
+}
+
+.roadmap-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px rgba(219, 64, 64, 0.12);
+}
+
+.card-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--gradient-2);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.card-date {
+  display: block;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-card h3 {
+  font-size: 1.5rem;
+  color: #ff0303;
+  margin-bottom: 0.25rem;
+}
+
+.roadmap-card h4 {
+  color: rgb(95, 34, 34);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-bullets {
+  list-style: none;
+  padding: 0;
+}
+
+.card-bullets li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.90rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.card-bullets li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Contact Grid Setup */
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+  max-width: 1050px;
+  margin-inline: auto;
+}
+
+/* Card Interaction & Design */
+.contact__card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(231, 46, 46, 0.1);
+  border-color: var(--secondary-color);
+}
+
+/* Icon Box */
+.contact__icon {
+  font-size: 1.8rem;
+  color: #ffffff;
+  background: var(--gradient-2);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* Text Formatting */
+.contact__details {
+  text-align: left;
+}
+
+.contact__details span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+}
+
+.contact__details1 span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+}
+
+.contact__details1 p {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--extra-light);
+  margin-top: 2px;
+}
+.contact__details p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--extra-light);
+  margin-top: 2px;
+}
+
+
+
+
+
+.footer {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--extra-light);
+  text-align: center;
+}
+
+@media (width > 576px) {
+  .service__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio__banner {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2rem;
+    gap: 1.5rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    display: none; /* Controlled by JS */
+  }
+
+  .nav__links.open {
+    display: flex;
+    animation: fadeInDown 0.4s forwards;
+  }
+
+  .nav__menu__btn {
+    display: block;
+  }
+
+  .header__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+    padding-top: 120px;
+  }
+
+  .header__content {
+    align-items: center; /* Centers items only on mobile */
+    text-align: center;
+  }
+
+  .header__content h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .header__content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .header__content .section__description {
+    text-align: center;
+    margin-inline: auto;
+  }
+  
+  .header__btn {
+    justify-content: center;
+  }
+
+  .header__image {
+    justify-content: center; /* Centers the container within the section */
+    padding: 1rem;
+    margin-left: 60px;
+  }
+
+  .image__container {
+    margin-inline: auto; /* Centers the image box itself */
+    max-width: 280px; 
+    margin-bottom: 2rem;
+  }
+
+  /* Ensures the decorative 'Ghost Frame' stays aligned with the centered image */
+  .image__container::before {
+    left: 25px; 
+    top: 25px;
+  }
+  
+  .about__container {
+    grid-template-columns: 1fr; /* Reset grid to a single column */
+  }
+
+  .about__content,
+  .about__content :is(.section__header, .section__description) {
+    text-align: center; /* Keep text centered on desktop */
+  }
+
+  .service__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+   .project__card {
+    grid-template-columns: 400px 1fr;
+  }
+
+  .gallery__grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* Forces 3 columns */
+    grid-auto-rows: 100px !important;
+    gap: 5px !important;
+  }
+  
+  .gallery__item.vertical, 
+  .gallery__item.tall {
+    grid-row: span 2 !important; /* Maintains the desktop 'masonry' look */
+  }
+
+  .project__card {
+    grid-template-columns: 1fr; /* Stacks image on top of content */
+    max-width: 500px; /* Prevents cards from being too wide on mobile */
+    margin-inline: auto;
+  }
+
+  .project__image {
+    min-height: 200px; /* Reduces image height for mobile screens */
+  }
+
+  .project__content {
+    padding: 1.5rem; /* Tighter padding for mobile */
+  }
+
+  .project__content h3 {
+    font-size: 1.1rem; /* Slightly smaller headers */
+  }
+
+  .project__tags {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+    .roadmap-new {
+    padding: 0 1rem;
+  }
+  
+  .roadmap-card {
+    padding: 1.5rem;
+    text-align: left; /* Ensures text is always readable */
+  }
+
+  .roadmap-card::before {
+    font-size: 3rem; /* Smaller decorative number for mobile */
+  }
+
+  .contact__card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact__details {
+    text-align: center;
+  }
+}
